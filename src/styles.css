@@ -43,9 +43,7 @@ body.menu-lock {
   color: #111111;
 }
 
-.opening-globe,
-.opening-o-symbol,
-.opening-c-symbol {
+.opening-globe {
   position: absolute;
   top: calc(50% - 75px);
   left: calc(50% - 75px);
@@ -54,57 +52,33 @@ body.menu-lock {
   overflow: visible;
 }
 
-.opening-globe,
-.opening-o-symbol,
-.opening-c-symbol {
+.opening-globe {
   stroke: currentColor;
   stroke-linecap: round;
   stroke-linejoin: round;
-}
-
-.opening-globe {
   stroke-width: 3;
 }
 
-.opening-o-symbol,
-.opening-c-symbol {
-  stroke-width: 14;
-}
-
-.opening-o-symbol path,
-.opening-c-symbol path + path {
-  stroke-width: 5;
-}
-
-.opening-i-symbol {
+.opening-word {
   position: absolute;
-  top: calc(50% - 69px);
-  left: calc(50% - 14px);
-  width: 28px;
-  height: 138px;
-  border-top: 10px solid currentColor;
-  border-bottom: 10px solid currentColor;
-  background: currentColor;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(18px, 4vw, 34px);
+  color: #111111;
+  font-family: "Space Grotesk", "Noto Sans JP", system-ui, sans-serif;
+  font-size: clamp(104px, 20vw, 154px);
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1;
   transform-origin: center;
 }
 
-.opening-i-symbol::before,
-.opening-i-symbol::after {
-  position: absolute;
-  left: 50%;
-  width: 82px;
-  height: 10px;
-  background: currentColor;
-  content: "";
-  transform: translateX(-50%);
-}
-
-.opening-i-symbol::before {
-  top: -10px;
-}
-
-.opening-i-symbol::after {
-  bottom: -10px;
+.opening-word span {
+  display: block;
+  min-width: 0.7em;
+  text-align: center;
 }
 
 a {

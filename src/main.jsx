@@ -701,58 +701,17 @@ function OpeningAnimation({ onComplete }) {
               <motion.path d="M30 102C58 92 102 92 130 102" initial={{ pathLength: 0, opacity: 0 }} animate={{ pathLength: 1, opacity: 1 }} transition={{ delay: 0.32, duration: 0.48, ease: "easeOut" }} />
             </motion.svg>
 
-            <motion.svg
-              className="opening-o-symbol"
-              viewBox="0 0 160 160"
-              fill="none"
-              initial={{ x: 0, opacity: 0, scale: 0.78 }}
-              animate={{ x: -126, opacity: 1, scale: 1 }}
-              transition={{ delay: 1.08, duration: 0.82, ease: [0.22, 1, 0.36, 1] }}
-            >
-              <motion.circle
-                cx="80"
-                cy="80"
-                r="56"
-                initial={{ pathLength: 0 }}
-                animate={{ pathLength: 1 }}
-                transition={{ delay: 1.08, duration: 0.7, ease: "easeOut" }}
-              />
-              <motion.path
-                d="M48 86C61 74 79 69 96 74M52 105C70 114 92 113 110 101"
-                initial={{ pathLength: 0, opacity: 0 }}
-                animate={{ pathLength: 1, opacity: 0.75 }}
-                transition={{ delay: 1.45, duration: 0.45 }}
-              />
-            </motion.svg>
-
             <motion.div
-              className="opening-i-symbol"
-              initial={{ opacity: 0, scaleY: 0 }}
-              animate={{ opacity: 1, scaleY: 1 }}
-              transition={{ delay: 1.55, duration: 0.45, ease: "easeOut" }}
-            />
-
-            <motion.svg
-              className="opening-c-symbol"
-              viewBox="0 0 160 160"
-              fill="none"
-              initial={{ x: 0, opacity: 0, scale: 0.78 }}
-              animate={{ x: 126, opacity: 1, scale: 1 }}
-              transition={{ delay: 1.08, duration: 0.82, ease: [0.22, 1, 0.36, 1] }}
+              className="opening-word"
+              aria-hidden="true"
+              initial={{ opacity: 0, scale: 0.92, filter: "blur(8px)" }}
+              animate={{ opacity: [0, 0, 1], scale: [0.92, 0.96, 1], filter: ["blur(8px)", "blur(4px)", "blur(0px)"] }}
+              transition={{ delay: 1.05, duration: 0.72, times: [0, 0.35, 1], ease: "easeOut" }}
             >
-              <motion.path
-                d="M121 42C108 29 88 23 69 29C43 37 26 61 28 88C30 116 54 137 82 136C98 135 112 128 123 117"
-                initial={{ pathLength: 0 }}
-                animate={{ pathLength: 1 }}
-                transition={{ delay: 1.08, duration: 0.72, ease: "easeOut" }}
-              />
-              <motion.path
-                d="M94 97C101 91 109 88 119 89"
-                initial={{ pathLength: 0, opacity: 0 }}
-                animate={{ pathLength: 1, opacity: 0.75 }}
-                transition={{ delay: 1.45, duration: 0.35 }}
-              />
-            </motion.svg>
+              <span>O</span>
+              <span>I</span>
+              <span>C</span>
+            </motion.div>
           </div>
         </motion.div>
       )}
