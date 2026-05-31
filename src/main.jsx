@@ -154,8 +154,8 @@ const copy = {
       ["進学サポートはありますか？", "志望校選び、出願書類、面接練習、試験対策を個別に支援します。"],
     ],
     accessTitle: "アクセス",
-    accessLead: "東京都新宿区を想定したアクセス情報です。正式住所に合わせて差し替えできます。",
-    address: "7-chome-22-1 Nishi-Shinjuku, Shinjuku City, Tokyo",
+    accessLead: "新宿エリアに位置し、主要駅や生活施設へアクセスしやすい環境です。",
+    address: "7-chōme-22-1 Nishi-Shinjuku, Shinjuku City, Tokyo",
     accessNotes: ["JR新宿駅から徒歩圏内", "東京メトロ・都営線からアクセス可能", "周辺に生活施設が充実"],
     contactTitle: "お問い合わせ",
     contactLead: "入学相談、資料請求、学校見学についてお気軽にご連絡ください。",
@@ -241,8 +241,8 @@ const copy = {
       ["有升学支援吗？", "提供志愿校选择、出愿文件、面试练习和考试对策等个别支援。"],
     ],
     accessTitle: "交通位置",
-    accessLead: "以下为以东京新宿区为基础的交通信息，可按正式地址替换。",
-    address: "7-chome-22-1 Nishi-Shinjuku, Shinjuku City, Tokyo",
+    accessLead: "位于新宿区域，前往主要车站和日常生活设施都较为便利。",
+    address: "7-chōme-22-1 Nishi-Shinjuku, Shinjuku City, Tokyo",
     accessNotes: ["从 JR 新宿站步行可达", "可使用东京 Metro 与都营线", "周边生活设施完善"],
     contactTitle: "联系我们",
     contactLead: "关于入学咨询、资料索取、学校参观，欢迎随时联系。",
@@ -341,8 +341,8 @@ const copy = {
       ["Do you support higher education applications?", "Yes. We support school selection, documents, interviews, and test preparation."],
     ],
     accessTitle: "Access",
-    accessLead: "Sample access information based on Shinjuku, Tokyo. Replace it with the official address when ready.",
-    address: "7-chome-22-1 Nishi-Shinjuku, Shinjuku City, Tokyo",
+    accessLead: "Located in the Shinjuku area with convenient access to major stations and daily-life facilities.",
+    address: "7-chōme-22-1 Nishi-Shinjuku, Shinjuku City, Tokyo",
     accessNotes: ["Walkable from JR Shinjuku Station", "Accessible by Tokyo Metro and Toei lines", "Daily-life facilities nearby"],
     contactTitle: "Contact",
     contactLead: "Contact us for admissions, documents, or school visits.",
@@ -513,6 +513,9 @@ function MenuDrawer({ t, route, menuOpen, setMenuOpen }) {
           <a href="mailto:hello@oic.school">
             <Mail size={17} /> hello@oic.school
           </a>
+          <p>
+            <MapPin size={17} /> {t.address}
+          </p>
         </div>
       </aside>
     </>
@@ -945,7 +948,9 @@ function ContactForm({ t }) {
         <a href="mailto:hello@oic.school">
           <Mail size={20} /> hello@oic.school
         </a>
-        <p>{t.address}</p>
+        <p>
+          <MapPin size={20} /> {t.address}
+        </p>
       </div>
     </div>
   );
@@ -962,6 +967,17 @@ function Footer({ t }) {
             <p>Language School</p>
           </div>
         </div>
+      </div>
+      <div className="footer-contact" aria-label="OIC contact information">
+        <a href="tel:+81312345678">
+          <Phone size={17} /> +81-3-1234-5678
+        </a>
+        <a href="mailto:hello@oic.school">
+          <Mail size={17} /> hello@oic.school
+        </a>
+        <p>
+          <MapPin size={17} /> {t.address}
+        </p>
       </div>
       <nav aria-label="Footer">
         <a href="#about">{t.about}</a>

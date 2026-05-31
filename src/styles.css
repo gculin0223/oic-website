@@ -313,7 +313,11 @@ textarea {
 }
 
 .drawer-contact a,
-.contact-card a {
+.drawer-contact p,
+.contact-card a,
+.contact-card p,
+.footer-contact a,
+.footer-contact p {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -807,9 +811,20 @@ textarea {
   mix-blend-mode: multiply;
 }
 
+.footer-contact {
+  display: grid;
+  gap: 8px;
+  max-width: 360px;
+  font-weight: 700;
+}
+
 .site-footer p {
   margin: 4px 0 0;
   color: rgba(17, 17, 17, 0.58);
+}
+
+.footer-contact p {
+  margin: 0;
 }
 
 .site-footer nav {
