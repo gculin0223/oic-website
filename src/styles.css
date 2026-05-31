@@ -223,20 +223,6 @@ textarea {
   color: #ffffff;
 }
 
-.route-pill {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  max-width: 36vw;
-  overflow: hidden;
-  color: rgba(17, 17, 17, 0.45);
-  font-family: "Space Grotesk", sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
 .menu-backdrop {
   position: fixed;
   inset: 0;
@@ -835,7 +821,6 @@ textarea {
 }
 
 @media (max-width: 920px) {
-  .route-pill,
   .request-link {
     display: none;
   }

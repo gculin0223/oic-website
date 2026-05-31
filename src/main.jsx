@@ -54,6 +54,13 @@ const typewriterGreetings = [
   "你好",
   "Xin chào",
   "Hello",
+  "안녕하세요",
+  "Bonjour",
+  "Hola",
+  "Guten Tag",
+  "Ciao",
+  "Olá",
+  "สวัสดี",
 ];
 
 const copy = {
@@ -426,7 +433,6 @@ function Header({ t, lang, route, menuOpen, setLang, setMenuOpen }) {
           {menuOpen ? <X size={26} /> : <Menu size={28} />}
         </button>
       </div>
-      <div className="route-pill">{route === "home" ? t.greeting : t[route]}</div>
     </header>
   );
 }
