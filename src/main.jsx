@@ -512,11 +512,11 @@ function MenuDrawer({ t, route, menuOpen, setMenuOpen }) {
           })}
         </nav>
         <div className="drawer-contact">
-          <a href="tel:+81312345678">
-            <Phone size={17} /> +81-3-1234-5678
+          <a href="tel:0608296788">
+            <Phone size={17} /> 0608296788
           </a>
-          <a href="mailto:hello@oic.school">
-            <Mail size={17} /> hello@oic.school
+          <a href="mailto:oicjapan2025@gmail.com">
+            <Mail size={17} /> oicjapan2025@gmail.com
           </a>
           <p>
             <MapPin size={17} /> {t.address}
@@ -957,11 +957,11 @@ function ContactForm({ t }) {
         </button>
       </form>
       <div className="contact-card">
-        <a href="tel:+81312345678">
-          <Phone size={20} /> +81-3-1234-5678
+        <a href="tel:0608296788">
+          <Phone size={20} /> 0608296788
         </a>
-        <a href="mailto:hello@oic.school">
-          <Mail size={20} /> hello@oic.school
+        <a href="mailto:oicjapan2025@gmail.com">
+          <Mail size={20} /> oicjapan2025@gmail.com
         </a>
         <p>
           <MapPin size={20} /> {t.address}
@@ -984,11 +984,11 @@ function Footer({ t }) {
         </div>
       </div>
       <div className="footer-contact" aria-label="OIC contact information">
-        <a href="tel:+81312345678">
-          <Phone size={17} /> +81-3-1234-5678
+        <a href="tel:0608296788">
+          <Phone size={17} /> 0608296788
         </a>
-        <a href="mailto:hello@oic.school">
-          <Mail size={17} /> hello@oic.school
+        <a href="mailto:oicjapan2025@gmail.com">
+          <Mail size={17} /> oicjapan2025@gmail.com
         </a>
         <p>
           <MapPin size={17} /> {t.address}
