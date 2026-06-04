@@ -63,8 +63,8 @@ const typewriterGreetings = [
 ];
 
 const schoolAddress = "〒544-0021 大阪府大阪市生野区勝山南4-10-30";
-const schoolMapLat = 34.6518898;
-const schoolMapLng = 135.5389591;
+const schoolMapLat = 34.652626807;
+const schoolMapLng = 135.536100799;
 const schoolMapEmbedUrl = `https://www.openstreetmap.org/export/embed.html?bbox=${schoolMapLng - 0.006}%2C${schoolMapLat - 0.004}%2C${schoolMapLng + 0.006}%2C${schoolMapLat + 0.004}&layer=mapnik&marker=${schoolMapLat}%2C${schoolMapLng}`;
 const schoolMapLink = `https://www.openstreetmap.org/?mlat=${schoolMapLat}&mlon=${schoolMapLng}#map=17/${schoolMapLat}/${schoolMapLng}`;
 
