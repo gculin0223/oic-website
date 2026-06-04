@@ -454,20 +454,6 @@ textarea {
   object-fit: cover;
 }
 
-.media-card {
-  position: absolute;
-  right: 18px;
-  bottom: 18px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  max-width: calc(100% - 36px);
-  padding: 14px 16px;
-  background: #ffffff;
-  font-family: "Space Grotesk", sans-serif;
-  font-weight: 700;
-}
-
 .eyebrow {
   color: #4f7f72;
   font-family: "Space Grotesk", sans-serif;
@@ -528,7 +514,7 @@ textarea {
 .contact-form,
 .contact-card,
 .faq-list details,
-.map-placeholder {
+.map-panel {
   border: 1px solid rgba(17, 17, 17, 0.12);
   background: rgba(255, 255, 255, 0.7);
 }
@@ -716,21 +702,38 @@ textarea {
   gap: 22px;
 }
 
-.map-placeholder {
+.map-panel {
+  display: grid;
+  overflow: hidden;
+  background: #edf4f2;
+}
+
+.map-panel iframe {
+  width: 100%;
+  min-height: 420px;
+  border: 0;
+}
+
+.map-caption {
   display: flex;
-  min-height: 360px;
-  flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
-  gap: 16px;
-  padding: 28px;
-  background:
-    linear-gradient(90deg, rgba(17, 17, 17, 0.06) 1px, transparent 1px),
-    linear-gradient(rgba(17, 17, 17, 0.06) 1px, transparent 1px),
-    #edf4f2;
-  background-size: 42px 42px;
-  text-align: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 18px;
+  background: #ffffff;
   font-weight: 800;
+}
+
+.map-caption span,
+.map-caption a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.map-caption a {
+  color: #4f7f72;
 }
 
 .check-list {

@@ -16,7 +16,6 @@ import {
   GraduationCap,
   Handshake,
   Home,
-  Languages,
   LifeBuoy,
   Mail,
   MapPin,
@@ -62,6 +61,12 @@ const typewriterGreetings = [
   "Olá",
   "สวัสดี",
 ];
+
+const schoolAddress = "〒544-0021 大阪府大阪市生野区勝山南4-10-30";
+const schoolMapLat = 34.6518898;
+const schoolMapLng = 135.5389591;
+const schoolMapEmbedUrl = `https://www.openstreetmap.org/export/embed.html?bbox=${schoolMapLng - 0.006}%2C${schoolMapLat - 0.004}%2C${schoolMapLng + 0.006}%2C${schoolMapLat + 0.004}&layer=mapnik&marker=${schoolMapLat}%2C${schoolMapLng}`;
+const schoolMapLink = `https://www.openstreetmap.org/?mlat=${schoolMapLat}&mlon=${schoolMapLng}#map=17/${schoolMapLat}/${schoolMapLng}`;
 
 const copy = {
   ja: {
@@ -154,9 +159,9 @@ const copy = {
       ["進学サポートはありますか？", "志望校選び、出願書類、面接練習、試験対策を個別に支援します。"],
     ],
     accessTitle: "アクセス",
-    accessLead: "新宿エリアに位置し、主要駅や生活施設へアクセスしやすい環境です。",
-    address: "7-chōme-22-1 Nishi-Shinjuku, Shinjuku City, Tokyo",
-    accessNotes: ["JR新宿駅から徒歩圏内", "東京メトロ・都営線からアクセス可能", "周辺に生活施設が充実"],
+    accessLead: "大阪市生野区に位置し、通学や日常生活に便利な環境です。",
+    address: schoolAddress,
+    accessNotes: ["大阪市内からアクセス可能", "周辺に生活施設が充実", "学校見学・相談の際は事前にご連絡ください"],
     contactTitle: "お問い合わせ",
     contactLead: "入学相談、資料請求、学校見学についてお気軽にご連絡ください。",
     formName: "お名前",
@@ -241,9 +246,9 @@ const copy = {
       ["有升学支援吗？", "提供志愿校选择、出愿文件、面试练习和考试对策等个别支援。"],
     ],
     accessTitle: "交通位置",
-    accessLead: "位于新宿区域，前往主要车站和日常生活设施都较为便利。",
-    address: "7-chōme-22-1 Nishi-Shinjuku, Shinjuku City, Tokyo",
-    accessNotes: ["从 JR 新宿站步行可达", "可使用东京 Metro 与都营线", "周边生活设施完善"],
+    accessLead: "位于大阪市生野区，通学与日常生活都较为便利。",
+    address: schoolAddress,
+    accessNotes: ["可从大阪市内前往", "周边生活设施较为完善", "学校参观和咨询请提前联系"],
     contactTitle: "联系我们",
     contactLead: "关于入学咨询、资料索取、学校参观，欢迎随时联系。",
     formName: "姓名",
@@ -341,9 +346,9 @@ const copy = {
       ["Do you support higher education applications?", "Yes. We support school selection, documents, interviews, and test preparation."],
     ],
     accessTitle: "Access",
-    accessLead: "Located in the Shinjuku area with convenient access to major stations and daily-life facilities.",
-    address: "7-chōme-22-1 Nishi-Shinjuku, Shinjuku City, Tokyo",
-    accessNotes: ["Walkable from JR Shinjuku Station", "Accessible by Tokyo Metro and Toei lines", "Daily-life facilities nearby"],
+    accessLead: "Located in Ikuno Ward, Osaka City, with convenient access for study and daily life.",
+    address: schoolAddress,
+    accessNotes: ["Accessible from within Osaka City", "Daily-life facilities nearby", "Please contact us before school visits or consultations"],
     contactTitle: "Contact",
     contactLead: "Contact us for admissions, documents, or school visits.",
     formName: "Name",
@@ -572,10 +577,6 @@ function HomePage({ t }) {
             src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=1200"
             alt="Students studying together"
           />
-          <div className="media-card">
-            <Languages size={24} />
-            <span>{t.greeting}</span>
-          </div>
         </motion.div>
       </section>
 
@@ -884,9 +885,23 @@ function getPageContent(t, route) {
     ),
     access: (
       <div className="access-layout">
-        <div className="map-placeholder">
-          <MapPin size={38} />
-          <span>{t.address}</span>
+        <div className="map-panel">
+          <iframe
+            title="OIC Language School map"
+            src={schoolMapEmbedUrl}
+            loading="lazy"
+            allowFullScreen
+            referrerPolicy="no-referrer-when-downgrade"
+          />
+          <div className="map-caption">
+            <span>
+              <MapPin size={18} /> {t.address}
+            </span>
+            <a href={schoolMapLink} target="_blank" rel="noreferrer">
+              OpenStreetMap
+              <ArrowRight size={16} />
+            </a>
+          </div>
         </div>
         <ul className="check-list">
           {t.accessNotes.map((note) => (
